@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply font-sans;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+  }
+}
+
+/* Custom range input styling */
+input[type="range"]::-webkit-slider-thumb {
+  @apply bg-emerald-600 border border-emerald-400 w-4 h-4 rounded-full shadow cursor-pointer transition-all duration-150;
+}
+input[type="range"]::-moz-range-thumb {
+  @apply bg-emerald-600 border border-emerald-400 w-4 h-4 rounded-full shadow cursor-pointer transition-all duration-150;
+}
+input[type="range"]::-webkit-slider-thumb:hover {
+  @apply scale-125;
+}
+input[type="range"]::-moz-range-thumb:hover {
+  @apply scale-125;
+}
+
+/* --- Pristine Dark Mode Overrides --- */
+.dark {
+  background-color: #090d16 !important;
+  color: #f1f5f9 !important;
+}
+
+/* Dark theme background replacements */
+.dark .bg-\[\#f8fafc\],
+.dark .bg-slate-50\/40,
+.dark .bg-slate-50\/50,
+.dark .bg-slate-50\/60 {
+  background-color: #090d16 !important;
+}
+
+.dark .bg-white {
+  background-color: #111a2e !important;
+}
+
+.dark .bg-slate-50 {
+  background-color: #0e1626 !important;
+}
+
+.dark .bg-slate-100 {
+  background-color: #1a2438 !important;
+}
+
+.dark .bg-emerald-50 {
+  background-color: #064e3b !important;
+  color: #34d399 !important;
+}
+
+.dark .bg-emerald-100 {
+  background-color: #064e3b !important;
+  color: #a7f3d0 !important;
+}
+
+.dark .bg-rose-50 {
+  background-color: #4c0519 !important;
+  color: #fda4af !important;
+}
+
+.dark .bg-amber-50 {
+  background-color: #451a03 !important;
+  color: #fde047 !important;
+}
+
+.dark .bg-slate-50\/80 {
+  background-color: #0e1626 !important;
+}
+
+/* Dark theme borders */
+.dark .border-slate-200,
+.dark .border-slate-100,
+.dark .border-slate-200\/60,
+.dark .border-slate-200\/80,
+.dark .divide-slate-200 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #1e293b !important;
+}
+
+/* Dark theme typography */
+.dark .text-slate-900 {
+  color: #f8fafc !important;
+}
+
+.dark .text-slate-800 {
+  color: #f1f5f9 !important;
+}
+
+.dark .text-slate-700 {
+  color: #cbd5e1 !important;
+}
+
+.dark .text-slate-600 {
+  color: #94a3b8 !important;
+}
+
+.dark .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+.dark .text-slate-400 {
+  color: #64748b !important;
+}
+
+/* Hover behaviors */
+.dark .hover\:bg-slate-50:hover,
+.dark .hover\:bg-slate-100\/50:hover {
+  background-color: #16223b !important;
+}
+
+/* Dark theme form elements */
+.dark select,
+.dark input[type="text"],
+.dark input[type="number"],
+.dark textarea {
+  background-color: #111a2e !important;
+  color: #f1f5f9 !important;
+  border-color: #1e293b !important;
+}
+
+.dark select option {
+  background-color: #111a2e !important;
+  color: #f1f5f9 !important;
+}
+
+/* Range track */
+.dark .bg-slate-100 {
+  background-color: #1e293b !important;
+}
+
+
